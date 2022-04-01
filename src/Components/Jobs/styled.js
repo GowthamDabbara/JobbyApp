@@ -27,3 +27,28 @@ export const Line = styled.div`
 	border-top: solid;
 	border-color: white;
 `;
+
+export const SearchOptionHeading = styled.p`
+	color: white;
+`;
+
+export const SearchInput = styled.input`
+	-webkit-appearance: none;
+	height: 30px;
+	background: transparent;
+	width: 300px;
+	border: solid;
+	border-width: 0.2px;
+	border-radius: 4px;
+	padding-left: 10px;
+	color: white;
+	border-color: white;
+	&:active {
+		outline: none !important;
+		border-color: white;
+	}
+	&:focus {
+		border-color: white;
+		outline: none !important;
+	}
+`;
