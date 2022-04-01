@@ -1,16 +1,23 @@
 import { useState } from "react";
 import { Container, Label, Checkbox } from "./styled";
 
-const SearchOption = ({ label, callback }) => {
+const SearchOption = ({ id, label, callback, type }) => {
 	const [isChecked, setIsChecked] = useState(false);
 	const onChanged = () => {
+		callback(id, !isChecked);
 		setIsChecked(!isChecked);
-		callback();
 	};
 	return (
 		<Container>
 			<Label>
-				<Checkbox type="checkbox" checked={isChecked} onChange={onChanged} />
+				<Checkbox
+					id={id}
+					type={type}
+					// checked={isChecked}
+					// onChange={onChanged}
+					onClick={onChanged}
+					name={"selectName"}
+				/>
 				{label}
 			</Label>
 		</Container>

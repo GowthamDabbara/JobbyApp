@@ -17,22 +17,6 @@ const logout = () => {
 	history.go(0);
 };
 
-const onJobsClick = async () => {
-	<Link to={"/jobs"} />;
-	console.log("jobs clicked");
-	// const jwtToken = Cookie.get("jwt_token");
-	// const options = {
-	// 	headers: {
-	// 		Authorization: `Bearer ${jwtToken}`,
-	// 	},
-	// 	method: "GET",
-	// };
-	// const url = `https://apis.ccbp.in/jobs?employment_type=${[]}&minimum_package=1000000&search=FRO`;
-	// const res = await fetch(url, options);
-	// const data = await res.json();
-	// console.log(data);
-};
-
 const Header = () => {
 	return (
 		<HeaderContainer>
@@ -48,7 +32,7 @@ const Header = () => {
 					<Navs>Home</Navs>
 				</Link>
 				<Link to={"/jobs"} style={{ textDecoration: "none" }}>
-					<Navs onClick={onJobsClick}>Jobs</Navs>
+					<Navs>Jobs</Navs>
 				</Link>
 			</NavContainer>
 			<LogoutButton onClick={logout}>Logout</LogoutButton>
