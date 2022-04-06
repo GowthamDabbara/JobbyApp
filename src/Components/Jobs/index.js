@@ -159,9 +159,7 @@ const Jobs = () => {
 	};
 
 	const onSalaryRangeChange = (id, isChecked) => {
-		if (isChecked === true) {
-			addSalaryType(id);
-		}
+		addSalaryType(id);
 	};
 
 	const onSearchInputChange = (e) => {
