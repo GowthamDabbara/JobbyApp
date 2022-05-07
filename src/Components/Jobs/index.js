@@ -14,6 +14,9 @@ import {
 	Line,
 	SearchOptionHeading,
 	SearchInput,
+	NoResultsImg,
+	NoResultsImgWrapper,
+	SearchInputOne,
 } from "./styled";
 
 const employmentTypeObjs = [
@@ -191,7 +194,11 @@ const Jobs = () => {
 			case "FAILED":
 				return <div>API Failed</div>;
 			case "NORESULTS":
-				return <div style={{ color: "white" }}>No Jobs Found</div>;
+				return (
+					<NoResultsImgWrapper>
+						<NoResultsImg src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png" />
+					</NoResultsImgWrapper>
+				);
 		}
 	};
 
@@ -213,6 +220,13 @@ const Jobs = () => {
 			<MainContainerWrapper height={window.innerHeight - 71 + "px"}>
 				<MainContainer>
 					<ContainerOne>
+						<SearchInputOne
+							value={searchValue}
+							type="text"
+							placeholder="Search.."
+							onChange={(e) => onSearchInputChange(e)}
+							onKeyDown={(e) => onEnter(e)}
+						/>
 						<Profile />
 						<Line></Line>
 						<SearchOptionHeading>Type of Employment</SearchOptionHeading>

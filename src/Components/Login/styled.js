@@ -4,6 +4,9 @@ export const Container = styled.div`
 	display: flex;
 	background-color: #121212;
 	height: ${(props) => props.height};
+	@media (max-width: 768px) {
+		height: ${`${window.innerHeight}px`};
+	}
 `;
 
 export const Form = styled.form`
@@ -16,6 +19,10 @@ export const Form = styled.form`
 	align-items: center;
 	justify-content: center;
 	border-radius: 5px;
+	@media (max-width: 768px) {
+		width: 90%;
+		margin: auto;
+	}
 `;
 
 export const InputContainer = styled.div`

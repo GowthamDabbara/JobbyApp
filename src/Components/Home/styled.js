@@ -10,6 +10,11 @@ export const Container = styled.div`
 	flex-direction: column;
 	padding-top: 130px;
 	padding-left: 75px;
+	@media (max-width: 769px) {
+		background-image: url("https://assets.ccbp.in/frontend/react-js/home-sm-bg.png");
+		padding-top: 50px;
+		padding-left: 35px;
+	}
 `;
 
 export const Title = styled.h1`
@@ -17,11 +22,18 @@ export const Title = styled.h1`
 	width: 550px;
 	margin-bottom: 0px;
 	color: #f8fafc;
+	@media (max-width: 769px) {
+		font-size: 25px;
+		width: 90%;
+	}
 `;
 
 export const Para = styled.p`
 	color: white;
 	width: 399px;
+	@media (max-width: 769px) {
+		width: 90%;
+	}
 `;
 
 export const FindJobsBtn = styled.button`

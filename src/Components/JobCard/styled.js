@@ -8,6 +8,9 @@ export const Container = styled.div`
 	border-radius: 13px;
 	color: white;
 	cursor: pointer;
+	@media (max-width: 769px) {
+		width: auto;
+	}
 `;
 
 export const TitleContainer = styled.div`

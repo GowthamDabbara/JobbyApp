@@ -10,6 +10,9 @@ export const Container = styled.div`
 	border-radius: 15px;
 	width: 250px;
 	padding-bottom: 20px;
+	@media (max-width: 769px) {
+		width: 300px;
+	}
 `;
 
 export const ProfileImage = styled.img`
