@@ -77,6 +77,9 @@ export const MoreInfoContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-top: 10px;
+	@media (max-width: 769px) {
+		flex-direction: column;
+	}
 `;
 
 export const MoreInfoLogo = styled.img`
