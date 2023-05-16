@@ -7,6 +7,7 @@ import JobDetails from "./Components/JobDetails";
 function App() {
 	return (
 		<Routes>
+			<div>helo</div>
 			<Route exact path="/login" element={<Login />} />
 			<Route exact path="/" element={<Home />} />
 			<Route exact path="/jobs" element={<Jobs />} />
